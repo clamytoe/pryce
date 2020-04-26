@@ -1,0 +1,15 @@
+name: pryce
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - black
+  - bs4
+  - flake8
+  - isort
+  - mypy
+  - pytest
+  - pytest-cov
+  - pytest-timeout
+  - python=3.8
+  - requests
