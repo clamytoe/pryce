@@ -11,8 +11,8 @@ from dataclasses import dataclass, field
 from datetime import date
 from typing import ClassVar, List
 
-from bs4 import BeautifulSoup
 import requests
+from bs4 import BeautifulSoup
 
 from pryce.headers import FIREFOX_LINUX
 
@@ -26,7 +26,7 @@ class Scraper(abc.ABC):
     shop: ClassVar[str] = field(init=False)
 
     def __post_init__(self):
-        self.search = self.search.strip().replace(' ', '+')
+        self.search = self.search.strip().replace(" ", "+")
         self.scrape_shop()
 
     def make_request(self) -> BeautifulSoup:
